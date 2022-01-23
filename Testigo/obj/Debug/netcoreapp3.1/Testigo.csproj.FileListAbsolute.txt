@@ -1,0 +1,15 @@
+C:\Users\zalman\source\repos\Kursovaya\Testigo\bin\Debug\netcoreapp3.1\Testigo.exe
+C:\Users\zalman\source\repos\Kursovaya\Testigo\bin\Debug\netcoreapp3.1\Testigo.deps.json
+C:\Users\zalman\source\repos\Kursovaya\Testigo\bin\Debug\netcoreapp3.1\Testigo.runtimeconfig.json
+C:\Users\zalman\source\repos\Kursovaya\Testigo\bin\Debug\netcoreapp3.1\Testigo.runtimeconfig.dev.json
+C:\Users\zalman\source\repos\Kursovaya\Testigo\bin\Debug\netcoreapp3.1\Testigo.dll
+C:\Users\zalman\source\repos\Kursovaya\Testigo\bin\Debug\netcoreapp3.1\Testigo.pdb
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.csproj.AssemblyReference.cache
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.csproj.GenerateResource.cache
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.AssemblyInfoInputs.cache
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.AssemblyInfo.cs
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.csproj.CoreCompileInputs.cache
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.dll
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.pdb
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.genruntimeconfig.cache
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.StartForm.resources
