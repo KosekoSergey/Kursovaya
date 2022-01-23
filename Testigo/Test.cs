@@ -23,7 +23,14 @@ namespace Testigo
         {
             get { return score; }
         }
-        public Test() { }
+        public Test()
+        {
+            characteristics = new int[1];
+            characteristics[0] = 1;
+            testName = "Без названия";
+            task = new Question[characteristics[0]];
+            task[0] = new QuestionType2(1, "Ответ", 0, new string[] { "Пример вопроса", "" });
+        }
         public Test(string path)
         {
             characteristics = new int[1];

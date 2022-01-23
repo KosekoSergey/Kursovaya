@@ -69,6 +69,7 @@ namespace Testigo
             this.CreateTestButton.TabIndex = 2;
             this.CreateTestButton.Text = "Создать тест";
             this.CreateTestButton.UseVisualStyleBackColor = true;
+            this.CreateTestButton.Click += new System.EventHandler(this.CreateTestButton_Click);
             // 
             // RedactTestButton
             // 

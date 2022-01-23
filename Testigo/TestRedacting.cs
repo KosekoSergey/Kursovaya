@@ -330,6 +330,7 @@ namespace Testigo
 
         private void SaveAllButton_Click(object sender, EventArgs e)  //сохранить все изменения в файл
         {
+            SaveQ();
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();  //открытие файла
             saveFileDialog1.Title = "Сохранить тест";
             saveFileDialog1.Filter = "Text files(*.test)|*.test";

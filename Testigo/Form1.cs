@@ -74,5 +74,13 @@ namespace Testigo
 
             }
         }
+
+        private void CreateTestButton_Click(object sender, EventArgs e) //создание теста
+        {
+            test = new Test();  //копирование теста в память
+            DeleteQuestionButton doTesting = new DeleteQuestionButton(this);
+            doTesting.Show();
+            Hide();
+        }
     }
 }
