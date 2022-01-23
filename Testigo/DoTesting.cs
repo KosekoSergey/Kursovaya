@@ -29,7 +29,7 @@ namespace Testigo
             SetQuestionWiev(startForm.Test.GetQuestion(questionNumber));
         }
 
-        private void DoTestingFormClosing(object sender, FormClosingEventArgs e)
+        private void DoTestingFormClosing(object sender, FormClosingEventArgs e)  //закрытие формы
         {
             if (testdone == 0)
             {
@@ -43,6 +43,7 @@ namespace Testigo
                     e.Cancel = true;
                 }
             }
+            
         }
 
         private void PreviousButton_Click(object sender, EventArgs e)  //предыдущий вопрос
@@ -90,36 +91,36 @@ namespace Testigo
         }
 
         private void StopTestButton_Click(object sender, EventArgs e)  //завершить тест
-        {            
+        {
+            switch (startForm.Test.GetQuestion(questionNumber).Type)  //запись выбранного ответа
+            {
+                case 1:
+                    if (VariantType1Radio1.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(1);
+                    if (VariantType1Radio2.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(2);
+                    if (VariantType1Radio3.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(3);
+                    if (VariantType1Radio4.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(4);
+                    if (VariantType1Radio5.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(5);
+                    if (VariantType1Radio6.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(6);
+                    break;
+                case 2:
+                    startForm.Test.GetQuestion(questionNumber).SetSelectedVariantStr(VariantType2TB.Text.Split(' ')[0] + Convert.ToChar(13));
+                    break;
+                case 3:
+                    int ans = 1000000;
+                    if (VariantType3Check1.Checked == true) ans += 100000;
+                    if (VariantType3Check2.Checked == true) ans += 20000;
+                    if (VariantType3Check3.Checked == true) ans += 3000;
+                    if (VariantType3Check4.Checked == true) ans += 400;
+                    if (VariantType3Check5.Checked == true) ans += 50;
+                    if (VariantType3Check6.Checked == true) ans += 6;
+                    startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(ans);
+                    break;
+                default:
+                    break;
+            }
             DialogResult result = MessageBox.Show("Вы действительно хотите завершить тестирование?", "Завершить тестирование?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
-                switch (startForm.Test.GetQuestion(questionNumber).Type)  //запись выбранного ответа
-                {
-                    case 1:
-                        if (VariantType1Radio1.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(1);
-                        if (VariantType1Radio2.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(2);
-                        if (VariantType1Radio3.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(3);
-                        if (VariantType1Radio4.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(4);
-                        if (VariantType1Radio5.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(5);
-                        if (VariantType1Radio6.Checked == true) startForm.Test.GetQuestion(questionNumber).SetSelectedVariant(6);
-                        break;
-                    case 2:
-                        startForm.Test.GetQuestion(questionNumber).SetSelectedVariantStr(VariantType2TB.Text.Split(' ')[0] + Convert.ToChar(13));
-                        break;
-                    case 3:
-                        int ans = 1000000;
-                        if (VariantType3Check1.Checked == true) ans += 100000;
-                        if (VariantType3Check2.Checked == true) ans += 20000;
-                        if (VariantType3Check3.Checked == true) ans += 3000;
-                        if (VariantType3Check4.Checked == true) ans += 400;
-                        if (VariantType3Check5.Checked == true) ans += 50;
-                        if (VariantType3Check6.Checked == true) ans += 6;
-                        startForm.Test.GetQuestion(questionNumber).SetSelectedVariantStr(Convert.ToString(ans));
-                        break;
-                    default:
-                        break;
-                }
                 testdone = 1;
                 //MessageBox.Show(Convert.ToString(string.Compare(startForm.Test.GetQuestion(1).GetSelectedVariantStr(), startForm.Test.GetQuestion(1).GetCorrectAnswerStr())));
                 //MessageBox.Show(Convert.ToString(Convert.ToInt32(startForm.Test.GetQuestion(1).GetSelectedVariantStr()[4])) + Convert.ToString(Convert.ToInt32(startForm.Test.GetQuestion(1).GetCorrectAnswerStr()[4])));

@@ -99,5 +99,18 @@ namespace Testigo
         {
             return task[num];
         }
+        public void ReplaceQuestion(int num, Question q)
+        {
+            task[num] = q;
+        }
+        public void DeleteQ(int num)
+        {
+            for (int i = num; i < characteristics[0] - 2; i++)
+            {
+                task[i] = task[i + 1];
+            }
+            characteristics[0]--;
+            Array.Resize(ref task, characteristics[0]);
+        }
     }
 }

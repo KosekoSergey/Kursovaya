@@ -13,6 +13,7 @@ namespace Testigo
             {
                 return type;
             }
+            set { type = value; }
         }
         protected string[] question;  //текст вопроса
         public string[] GetQuestionText()

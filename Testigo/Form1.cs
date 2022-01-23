@@ -30,15 +30,19 @@ namespace Testigo
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)  //Посмор=треть результаты
         {
-
+            if (test != null)
+            {
+                MessageBox.Show("Результат вашей прошлой попытки - " + Convert.ToString(test.Count()) + " из " + Convert.ToString(test.GetNumOfQuestions()), "Результаты предыдущего теста");
+            }
         }
 
         private void StartTestingButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();  //открытие файла
             openFileDialog1.Title = "Выберите тест";
+            openFileDialog1.Filter = "Text files(*.test)|*.test";
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
             if (openFileDialog1.CheckFileExists)
@@ -52,6 +56,23 @@ namespace Testigo
             } 
             
 
+        }
+
+        private void RedactTestButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();  //открытие файла
+            openFileDialog1.Title = "Выберите тест";
+            openFileDialog1.Filter = "Text files(*.test)|*.test";
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            if (openFileDialog1.CheckFileExists)
+            {
+                test = new Test(openFileDialog1.FileName);  //копирование теста в память
+                DeleteQuestionButton doTesting = new DeleteQuestionButton(this);
+                doTesting.Show();
+                Hide();
+
+            }
         }
     }
 }

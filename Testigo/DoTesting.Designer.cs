@@ -75,7 +75,7 @@ namespace Testigo
             // NextButton
             // 
             this.NextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.NextButton.Location = new System.Drawing.Point(905, 438);
+            this.NextButton.Location = new System.Drawing.Point(431, 369);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(161, 31);
             this.NextButton.TabIndex = 1;
@@ -86,7 +86,7 @@ namespace Testigo
             // PreviousButton
             // 
             this.PreviousButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PreviousButton.Location = new System.Drawing.Point(12, 438);
+            this.PreviousButton.Location = new System.Drawing.Point(12, 369);
             this.PreviousButton.Name = "PreviousButton";
             this.PreviousButton.Size = new System.Drawing.Size(161, 31);
             this.PreviousButton.TabIndex = 2;
@@ -100,16 +100,17 @@ namespace Testigo
             this.QuestionNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.QuestionNumber.AutoSize = true;
             this.QuestionNumber.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.QuestionNumber.Location = new System.Drawing.Point(531, 9);
+            this.QuestionNumber.Location = new System.Drawing.Point(294, 9);
             this.QuestionNumber.Name = "QuestionNumber";
             this.QuestionNumber.Size = new System.Drawing.Size(52, 21);
             this.QuestionNumber.TabIndex = 3;
             this.QuestionNumber.Text = "label1";
+            this.QuestionNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StopTestButton
             // 
             this.StopTestButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.StopTestButton.Location = new System.Drawing.Point(456, 438);
+            this.StopTestButton.Location = new System.Drawing.Point(219, 369);
             this.StopTestButton.Name = "StopTestButton";
             this.StopTestButton.Size = new System.Drawing.Size(184, 31);
             this.StopTestButton.TabIndex = 4;
@@ -128,9 +129,9 @@ namespace Testigo
             this.VariantType1.Controls.Add(this.VariantType1Radio3);
             this.VariantType1.Controls.Add(this.VariantType1Radio2);
             this.VariantType1.Controls.Add(this.VariantType1Radio1);
-            this.VariantType1.Location = new System.Drawing.Point(12, 226);
+            this.VariantType1.Location = new System.Drawing.Point(12, 157);
             this.VariantType1.Name = "VariantType1";
-            this.VariantType1.Size = new System.Drawing.Size(1054, 206);
+            this.VariantType1.Size = new System.Drawing.Size(580, 206);
             this.VariantType1.TabIndex = 5;
             this.VariantType1.TabStop = false;
             // 
@@ -215,9 +216,9 @@ namespace Testigo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.VariantType2.Controls.Add(this.VariantType2TB);
             this.VariantType2.Controls.Add(this.VariantType2Label);
-            this.VariantType2.Location = new System.Drawing.Point(12, 226);
+            this.VariantType2.Location = new System.Drawing.Point(12, 157);
             this.VariantType2.Name = "VariantType2";
-            this.VariantType2.Size = new System.Drawing.Size(1054, 206);
+            this.VariantType2.Size = new System.Drawing.Size(580, 206);
             this.VariantType2.TabIndex = 6;
             this.VariantType2.TabStop = false;
             // 
@@ -248,9 +249,9 @@ namespace Testigo
             this.VariantType3.Controls.Add(this.VariantType3Check2);
             this.VariantType3.Controls.Add(this.VariantType3Check1);
             this.VariantType3.Controls.Add(this.VariantType3Label);
-            this.VariantType3.Location = new System.Drawing.Point(12, 226);
+            this.VariantType3.Location = new System.Drawing.Point(12, 157);
             this.VariantType3.Name = "VariantType3";
-            this.VariantType3.Size = new System.Drawing.Size(1054, 206);
+            this.VariantType3.Size = new System.Drawing.Size(580, 206);
             this.VariantType3.TabIndex = 8;
             this.VariantType3.TabStop = false;
             // 
@@ -327,7 +328,7 @@ namespace Testigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 481);
+            this.ClientSize = new System.Drawing.Size(604, 412);
             this.Controls.Add(this.VariantType3);
             this.Controls.Add(this.VariantType2);
             this.Controls.Add(this.VariantType1);
@@ -336,6 +337,7 @@ namespace Testigo
             this.Controls.Add(this.PreviousButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.QuestionText);
+            this.MinimumSize = new System.Drawing.Size(620, 450);
             this.Name = "DoTesting";
             this.Text = "Testigo";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DoTestingFormClosing);

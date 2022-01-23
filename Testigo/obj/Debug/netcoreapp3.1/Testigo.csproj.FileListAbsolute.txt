@@ -14,3 +14,4 @@ C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.p
 C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.genruntimeconfig.cache
 C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.StartForm.resources
 C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.DoTesting.resources
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.DeleteQuestionButton.resources
