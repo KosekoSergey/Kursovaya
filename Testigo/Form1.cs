@@ -12,6 +12,14 @@ namespace Testigo
 {
     public partial class StartForm : Form
     {
+        private Test test;
+        public Test Test
+        {
+            get
+            {
+                return test;
+            }
+        }
         public StartForm()
         {
             InitializeComponent();
@@ -29,7 +37,21 @@ namespace Testigo
 
         private void StartTestingButton_Click(object sender, EventArgs e)
         {
-            Test test = new Test(@"C:\Users\zalman\source\repos\Kursovaya\Testigo\test.txt");
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();  //открытие файла
+            openFileDialog1.Title = "Выберите тест";
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            if (openFileDialog1.CheckFileExists)
+            {
+                test = new Test(/*@"C:\Users\zalman\source\repos\Kursovaya\Testigo\test.txt"*/openFileDialog1.FileName);  //копирование теста в память
+                DoTesting doTesting = new DoTesting(this);
+                doTesting.Show();
+
+                Hide();
+                
+            } 
+            
+
         }
     }
 }

@@ -6,11 +6,23 @@ using System.IO;
 namespace Testigo
 {
 
-    class Test
+    public class Test
     {
         private Question[] task;  //массив вопросов
         private int[] characteristics;  //характеристики теста: 0-кол-во вопросов
+        private string testName;  //название теста
+        public string TestName
+        {
+            get
+            {
+                return testName;
+            }
+        }
         private int score;  //кол-во правильных ответов
+        public int Score
+        {
+            get { return score; }
+        }
         public Test() { }
         public Test(string path)
         {
@@ -18,16 +30,17 @@ namespace Testigo
             string[] test;
             using (StreamReader stream = File.OpenText(path))
                 test = stream.ReadToEnd().Split("\n");
+            testName = test[0];
             int i = 0;
-            foreach (string num in test[0].Split(" "))  //считывание строки характериситик
+            foreach (string num in test[1].Split(" "))  //считывание строки характериситик
             {
                 characteristics[i] = Convert.ToInt32(num);
                 i++;
             }
-            task = new Question[characteristics[0]];  //создание вопросов
+            task = new Question[characteristics[0]];  //создание масива вопросов
 
             int curqest = 0;
-            for (i = 1; i < test.Length; i++)  //цикл поочередного инициализирования вопроса
+            for (i = 2; i < test.Length; i++)  //цикл поочередного инициализирования вопроса
             {
                 string[] tempstr;
                 tempstr = test[i].Split(" ");
@@ -41,12 +54,17 @@ namespace Testigo
                         task[curqest] = new QuestionType1(size_of_quest, num_of_var, correct_var, i + 1, test);
                         break;
                     case 2:
-                        correct_var = Convert.ToInt32(tempstr[2]);  //получение правильного варианта
-                        task[curqest] = new QuestionType2(size_of_quest, correct_var, i + 1, test);
+                        //correct_var = Convert.ToInt32(tempstr[2]);  //получение правильного варианта
+                        string correct_var_str = tempstr[2];  //получение правильного варианта
+                        task[curqest] = new QuestionType2(size_of_quest, correct_var_str, i + 1, test);
+                        //size_of_quest, correct_var, i + 1, test
                         break;
                     case 3:
-                        string correct_var_str = tempstr[2];  //получение правильного варианта
-                        task[curqest] = new QuestionType3(size_of_quest, correct_var_str, i + 1, test);
+                        //string correct_var_str = tempstr[2];  //получение правильного варианта
+                        correct_var = Convert.ToInt32(tempstr[2]);  //получение правильного варианта
+                        num_of_var = Convert.ToInt32(tempstr[3]);  //получение кол-ва вариантов
+                        task[curqest] = new QuestionType3(size_of_quest, num_of_var, correct_var, i + 1, test);
+                        //size_of_quest, correct_var_str, i + 1, test
                         break;
                 }
                 curqest++;
@@ -63,6 +81,15 @@ namespace Testigo
         public int GetNumOfQuestions()
         {
             return characteristics[0];
+        }
+        public int Count()
+        {
+            score = 0;
+            for (int i = 0; i < characteristics[0]; i++)
+            {
+                if (CheckAnswer(i)) score++;
+            }
+            return score;
         }
         public bool CheckAnswer(int num)  //проверка ответа вопроса теста
         {

@@ -13,3 +13,4 @@ C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.d
 C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.pdb
 C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.genruntimeconfig.cache
 C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.StartForm.resources
+C:\Users\zalman\source\repos\Kursovaya\Testigo\obj\Debug\netcoreapp3.1\Testigo.DoTesting.resources
