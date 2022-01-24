@@ -30,12 +30,13 @@ namespace Testigo
 
         }
 
-        private void button2_Click(object sender, EventArgs e)  //Посмор=треть результаты
+        private void button2_Click(object sender, EventArgs e)  //Посмотреть результаты
         {
             if (test != null)
             {
                 MessageBox.Show("Результат вашей прошлой попытки - " + Convert.ToString(test.Count()) + " из " + Convert.ToString(test.GetNumOfQuestions()), "Результаты предыдущего теста");
             }
+            else MessageBox.Show("Вы ещё не проходили никаких тестов.", "Ой");
         }
 
         private void StartTestingButton_Click(object sender, EventArgs e)
