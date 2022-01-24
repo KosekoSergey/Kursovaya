@@ -27,6 +27,7 @@ namespace Testigo
             }
             QuestionText.Text = str;
             SetQuestionWiev(startForm.Test.GetQuestion(questionNumber));
+            if (startForm.Test.GetNumOfQuestions() == 1) NextButton.Visible = false;
         }
 
         private void DoTestingFormClosing(object sender, FormClosingEventArgs e)  //закрытие формы
