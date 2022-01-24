@@ -75,23 +75,25 @@ namespace Testigo
             // NextButton
             // 
             this.NextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NextButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.NextButton.Location = new System.Drawing.Point(431, 369);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(161, 31);
             this.NextButton.TabIndex = 1;
             this.NextButton.Text = "Следующий вопрос\r\n";
-            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.UseVisualStyleBackColor = false;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // PreviousButton
             // 
             this.PreviousButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.PreviousButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.PreviousButton.Location = new System.Drawing.Point(12, 369);
             this.PreviousButton.Name = "PreviousButton";
             this.PreviousButton.Size = new System.Drawing.Size(161, 31);
             this.PreviousButton.TabIndex = 2;
             this.PreviousButton.Text = "Предыдущий вопрос";
-            this.PreviousButton.UseVisualStyleBackColor = true;
+            this.PreviousButton.UseVisualStyleBackColor = false;
             this.PreviousButton.Visible = false;
             this.PreviousButton.Click += new System.EventHandler(this.PreviousButton_Click);
             // 
@@ -110,12 +112,13 @@ namespace Testigo
             // StopTestButton
             // 
             this.StopTestButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.StopTestButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.StopTestButton.Location = new System.Drawing.Point(219, 369);
             this.StopTestButton.Name = "StopTestButton";
             this.StopTestButton.Size = new System.Drawing.Size(184, 31);
             this.StopTestButton.TabIndex = 4;
             this.StopTestButton.Text = "Завершить тестирование";
-            this.StopTestButton.UseVisualStyleBackColor = true;
+            this.StopTestButton.UseVisualStyleBackColor = false;
             this.StopTestButton.Click += new System.EventHandler(this.StopTestButton_Click);
             // 
             // VariantType1

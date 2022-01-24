@@ -132,13 +132,14 @@ namespace Testigo
             // 
             // AddQuestionButton
             // 
+            this.AddQuestionButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.AddQuestionButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AddQuestionButton.Location = new System.Drawing.Point(430, 68);
             this.AddQuestionButton.Name = "AddQuestionButton";
             this.AddQuestionButton.Size = new System.Drawing.Size(125, 25);
             this.AddQuestionButton.TabIndex = 6;
             this.AddQuestionButton.Text = "Добавить вопрос";
-            this.AddQuestionButton.UseVisualStyleBackColor = true;
+            this.AddQuestionButton.UseVisualStyleBackColor = false;
             this.AddQuestionButton.Click += new System.EventHandler(this.AddQuestionButton_Click);
             // 
             // QTextTB
@@ -401,24 +402,26 @@ namespace Testigo
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(561, 68);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 25);
             this.button1.TabIndex = 21;
             this.button1.Text = "Удалить вопрос";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SaveAllButton
             // 
+            this.SaveAllButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.SaveAllButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SaveAllButton.Location = new System.Drawing.Point(483, 12);
             this.SaveAllButton.Name = "SaveAllButton";
             this.SaveAllButton.Size = new System.Drawing.Size(157, 25);
             this.SaveAllButton.TabIndex = 22;
             this.SaveAllButton.Text = "Сохранить изменения";
-            this.SaveAllButton.UseVisualStyleBackColor = true;
+            this.SaveAllButton.UseVisualStyleBackColor = false;
             this.SaveAllButton.Click += new System.EventHandler(this.SaveAllButton_Click);
             // 
             // DeleteQuestionButton
